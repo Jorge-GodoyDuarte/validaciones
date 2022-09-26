@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <%- include('./partials/head', {
+        title : 'Login'
+    })  %> 
+
+
+<body class="register">
+    <%- include('./partials/header')  %> 
+
+    <main class="register__main">
+        <section class="register__main__section general__main__section">
+          <h1 class="form__title">Ingresá</h1>
+          <form action="/users/profile" class="form">
+                <div class="form__box">
+                    <label class="form__label" for="email">Email:</label>
+                    <input class="form__input" type="email" id="email" name="email">
+                    <a class="form__label--msg" href="/register" >¿No estás registrado?</a>
+                    
+
+                </div>
+                <div class="form__box">
+                    <label class="form__label" for="password">Contraseña:</label>
+                    <input class="form__input" type="password" id="password" name="password">
+                    <a class="form__label--msg" href="#" >¿Olvidaste tu contraseña?</a>
+                </div>
+                <div class="form__box form__box--flex">
+                    <input class="form__checkbox" type="checkbox" id="terminos" name="terms">
+                    <label class="form__label" for="terminos">Recordame</label>
+                </div>
+                <div class="form__box form__box--flex ">
+                    <a href="" class="form__button form__button--cancel">Cancelar</a>
+                    <button  class="form__button form__button--send" type="submit">Ingresá</button>
+                </div>
+          </form>
+        </section>
+    </main>
+</body>
+
+</html>

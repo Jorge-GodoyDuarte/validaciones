@@ -1,0 +1,121 @@
+/* general */
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active { -webkit-box-shadow: 0 0 0 30px white inset !important; 
+}
+
+/* cajas */
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.form__title {
+    text-align: center;
+}
+
+.form__subTitle {
+    margin-bottom: 20px;
+}
+
+.form__box {
+    width: 100%;
+}
+
+.form__box--flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.form__box--column {
+    display: flex;
+    flex-direction: column;
+    gap:5px
+}   
+
+/* elementos */
+
+.form__label {
+    font-size: 15px;
+}
+.form__input {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid silver;
+    outline: none;
+}
+
+.form__select {
+    width: 100%;
+    padding: 10px 0;
+    border: 1px solid silver;
+}
+
+.form__textarea {
+    width: 100%;
+    padding: 10px 0;
+    border: 1px solid silver;
+    resize: none;
+}
+
+.form__label--small {
+    font-size: 13px;
+}
+
+.form__label--msg {
+    display: block;
+    font-size: 13px;
+    margin-top: 10px;
+    text-align: center;
+    color: var(--colorRojo);
+}
+
+.form__text--error {
+    color: red;
+}
+
+
+/* botones */
+.form__button {
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px;
+}
+.form__button--cancel {
+    background-color: grey;
+    cursor:default;
+}
+
+.form__button--cancel:hover {
+    background-color: DarkGray;
+    cursor: pointer;
+}
+
+.form__button--send {
+    background-color: var(--colorRojo);
+}
+
+.form__button--send:hover {
+    background-color: OrangeRed;
+    cursor: pointer;
+}
+
+@media (min-width:768px) {
+    .form {
+        flex-direction: row;
+        justify-content: space-between;
+    
+    }
+
+    .form__box {
+        width: 47%;
+    }
+}
+
+
+
+

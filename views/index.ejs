@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('./partials/head',{
+    title: 'Home'
+})  %> 
+
+<body class="home">
+    <%- include('./partials/header')  %> 
+
+      <section class="home__section--banner">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item home__main__img--banner active" id="img-banner0">
+                  </div>
+                  <div class="carousel-item home__main__img--banner" id="img-banner1">
+                  </div>
+                  <div class="carousel-item home__main__img--banner" id="img-banner2">
+                  </div>
+                  <div class="carousel-item home__main__img--banner" id="img-banner3">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </section>
+    <main class="home__main">
+      
+        <section class="home__main__section--products general__main__section">
+            <% products.forEach(({id,name,images}) => { %>
+               <article class="home__main__section__article--product">
+                <figure>
+                    <a href="/product-detail"><img src="/images/celulares/<%= images[0] %>" alt=""></a>
+                </figure>
+                <h2><%= name %> </h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi quia, eius autem veniam accusantium
+                    maiores doloribus aliquid possimus quae debitis?</p>
+                <a class="general__button__product " href="/products/detail/<%= id %>">ver más</a>
+            </article>
+            <% }) %>
+          
+          
+            <article class="home__main__section__article--carousel">
+                <div class="glider-contain">
+                    <div class="glider">
+                      <div><img src="/images/celulares/celu1.jpeg" alt=""></div>
+                      <div><img src="/images/celulares/celu2.png" alt=""></div>
+                      <div><img src="/images/celulares/celu3.png" alt=""></div>
+                      <div><img src="/images/celulares/celu4.jpg" alt=""></div>
+                      <div><img src="/images/celulares/celu5.jpg" alt=""></div>
+                      <div><img src="/images/celulares/celu6.jpg" alt=""></div>
+                      <div><img src="/images/celulares/celu7.png" alt=""></div>
+                      <div><img src="/images/celulares/celu8.jpg" alt=""></div>
+
+                    </div>
+                  
+                    <button aria-label="Previous" class="glider-prev">«</button>
+                    <button aria-label="Next" class="glider-next">»</button>
+                    <div role="tablist" class="dots"></div>
+                  </div>
+            </article>
+        </section>
+        <aside class="home__main__aside">
+            <h2>Tutoriales</h2>
+            <section class="home__main__aside__section--tutoriales">
+                <article>
+                    <img src="/images/aside-01.jpg" alt="">
+                    <p>Título del tutorial de reparación</p>
+                </article>
+                <article>
+                    <img src="/images/aside-02.jpg" alt="">
+                    <p>Título del tutorial de reparación</p>
+                </article>
+                <article>
+                    <img src="/images/aside-03.jpg" alt="">
+                    <p>Título del tutorial de reparación</p>
+                </article>
+                <article>
+                    <img src="/images/aside-04.jpg" alt="">
+                    <p>Título del tutorial de reparación</p>
+                </article>
+            </section>
+            <h2>Publicidad</h2>
+            <section class="home__main__aside__section--publicidad">
+                <article>
+                    <img src="/images/ad-01.jpg" alt="">
+                    <img src="/images/ad-02.jpg" alt="">
+                </article>
+
+            </section>
+        </aside>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="/javascripts/glider.js"></script>
+    <script>
+        window.addEventListener('load', function(){
+
+            const myCarouselElement = document.querySelector('#carouselExampleIndicators')
+            const carousel = new bootstrap.Carousel(myCarouselElement, {
+            interval: 5000,
+})
+
+        new Glider(document.querySelector('.glider'), {
+            slidesToShow : 1,
+            dots: '.dots',
+            arrows: {
+                prev: '.glider-prev',
+                next: '.glider-next'
+            },
+            itemWidth: 300,
+            draggable : true,
+            responsive: [
+    {
+      // screens greater than >= 768px
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        itemWidth: 150,
+        duration: 0.25
+      }
+    },{
+      // screens greater than >= 1024px
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        itemWidth: 150,
+        duration: 0.25
+      }
+    }
+  ]
+        })
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+:root {
+    --colorRojo : #DF5837;
+    --colorCeleste : cadetblue;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url('/images/bg-2.png');
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+li{
+    list-style: none;
+}
+
+ul, ol {
+    padding-left: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+main {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.general__main__section{
+    background-color: #fff;
+    padding: 15px;
+    margin: 15px 0;
+    box-shadow: gray 5px 5px 5px;
+}
+
+.general__button__product{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 10px;
+    color: #fff;
+    background-color: var(--colorRojo);
+}
+
+.general__button__product:hover{
+
+    background-color: orangered;
+    transition: all 0.5s;
+}

@@ -1,0 +1,137 @@
+[
+   {
+      "id": 1,
+      "name": "Iphone 13",
+      "brand": "Apple",
+      "price": 1200,
+      "discount": 10,
+      "images": [
+         "img-phone-01.jpg"
+      ],
+      "section": "temporada",
+      "category": "alta"
+   },
+   {
+      "id": 2,
+      "name": "Motorola X-Play",
+      "brand": "Nokia",
+      "price": 200,
+      "discount": 0,
+      "images": [
+         "img-phone-02.jpg"
+      ],
+      "section": "Popular",
+      "category": "Alta"
+   },
+   {
+      "id": 3,
+      "name": "Samsung S20",
+      "brand": "Samsung",
+      "price": 300,
+      "discount": 50,
+      "images": [
+         "img-phone-03.jpg"
+      ],
+      "section": "temporada",
+      "category": "baja"
+   },
+   {
+      "id": 4,
+      "name": "Xiaomi Redmi Note",
+      "brand": "Xiaomi",
+      "price": 250,
+      "discount": 5,
+      "images": [
+         "img-phone-01.jpg"
+      ],
+      "section": "temporada",
+      "category": "media"
+   },
+   {
+      "id": 5,
+      "name": "Motorola X-Play",
+      "brand": "Motorola",
+      "price": 250,
+      "discount": 10,
+      "images": [
+         "img-phone-02.jpg"
+      ],
+      "section": "temporada",
+      "category": "media"
+   },
+   {
+      "id": 6,
+      "name": "Motorola G5",
+      "brand": "Motorola",
+      "price": 150,
+      "discount": 20,
+      "images": [
+         "img-phone-03.jpg"
+      ],
+      "section": "popular",
+      "category": "media"
+   },
+   {
+      "id": 7,
+      "name": "Samsung S22a",
+      "price": 2500,
+      "discount": 15,
+      "brand": "Samsung",
+      "category": "alta",
+      "section": "popular",
+      "images": [
+         "img-phone-01.jpg"
+      ]
+   },
+   {
+      "id": 8,
+      "name": "Iphone 11",
+      "price": 2000,
+      "discount": 15,
+      "brand": "Apple",
+      "category": "alta",
+      "section": "popular",
+      "images": [
+         "img-phone-01.jpg"
+      ]
+   },
+   {
+      "id": 9,
+      "name": "Nuevo producto 1",
+      "price": 1290,
+      "discount": 10,
+      "description": "dsfasdfasdfasd asdfasdf asdfa",
+      "brand": "Motorola",
+      "category": "Alta",
+      "section": "Popular",
+      "images": [
+         "product-1661395814725.jpg"
+      ]
+   },
+   {
+      "id": 10,
+      "name": "Producto 2",
+      "price": 1200,
+      "discount": 30,
+      "description": "sdfasdfd fasd sadfsad fasdf asdfsdaf",
+      "brand": "Motorola",
+      "category": "Baja",
+      "section": "Popular",
+      "images": [
+         "default-image.png"
+      ]
+   },
+   {
+      "id": 11,
+      "name": "",
+      "price": 100,
+      "discount": 10,
+      "description": "asdfsadfsda fasdf asdfsa dfasd",
+      "brand": "Samsung",
+      "category": "",
+      "section": "",
+      "images": [
+         "default-image.png"
+      ]
+   }
+]

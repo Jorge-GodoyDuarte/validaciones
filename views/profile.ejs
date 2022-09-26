@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <%- include('./partials/head',{
+        title : 'Perfil de usuario'
+    })  %> 
+
+
+<body class="register">
+    <%- include('./partials/header')  %> 
+
+    <main class="register__main">
+        <section class="register__main__section general__main__section">
+          <h1 class="form__title">Mi Perfil</h1>
+          <form action="/users/update/1?_method=PUT" class="form" enctype="multipart/form-data" method="POST">
+                <div class="form__box">
+                    <label class="form__label" for="nombre">Nombre:</label>
+                    <input class="form__input" type="text" id="nombre" autocomplete="off" name="firstName" value="mi nombre">
+                </div>
+                <div class="form__box">
+                    <label class="form__label" for="apellido">Apellido:</label>
+                    <input class="form__input" type="text" id="apellido" name="lastName" value="mi apellido">
+                </div>
+                <div class="form__box">
+                    <label class="form__label" for="email">Email:</label>
+                    <input class="form__input" type="email" id="email" name="email" value="mi email">
+                </div>
+                <div class="form__box">
+                    <label class="form__label" for="date">Fecha de nacimiento:</label>
+                    <input class="form__input" type="date" id="date" name="birthday" value="1976-03-03">
+                </div>
+                <div class="form__box form__box--column">
+                    <h5 class="form__subTitle">Género</h5>
+                     <label for="masculino"><input class="form__input--radio" value="m" type="radio" id="masculino" name="gender"> Masculino</label>
+                     <label for="femenino"><input class="form__input--radio" value="f" type="radio" id="femenino" name="gender"> Femenino</label>
+                    <label for="otro"><input class="form__input--radio" value="o" type="radio" id="otro" name="gender"> Otro</label>
+                </div>
+                <div class="form__box form__box--column">
+                    <h5 class="form__subTitle">Hobbies</h5>
+                     <label for="Música"><input class="form__input--radio" value="musica" type="checkbox" id="Música" name="hobbies"> Música</label>
+                     <label for="Deportes"><input class="form__input--radio"  value="deportes" type="checkbox" id="Deportes" name="hobbies"> Deportes</label>
+                    <label for="libre"><input class="form__input--radio"  value="aire libre" type="checkbox" id="libre" name="hobbies"> Aire libre</label>
+                </div>
+                <div class="form__box form__box--column">
+                    <h5 class="form__subTitle">Domicilio</h5>
+                        <label class="form__label" for="direccion">Calle y altura:</label>
+                        <input class="form__input" type="text" id="direccion" name="address" value="Siempre viva 123">
+
+                    <select class="form__select" name="city" id="city">
+                        <option value="" hidden selected>Seleccione su ciudad...</option>
+                        <option value="buenos aires">Buenos Aires</option>
+                        <option value="cutral-co">Cutral-Có</option>
+                        <option value="san pedro">San Pedro</option>
+                        <option value="plaza huincul">Plaza Huincul</option>
+                    </select>
+                    <select class="form__select" name="province" id="province">
+                        <option value="" hidden selected>Seleccione su provincia...</option>
+                        <option value="neuquen">Neuquén</option>
+                        <option value="buenos aires">Buenos Aires</option>
+                        <option value="jujuy">Jujuy</option>
+                    </select>
+                </div>
+                <div class="form__box form__box--column">
+                    <h5 class="form__subTitle">Acerca de mí</h5>
+                    <textarea class="form__textarea" name="about" id="about" cols="30" rows="5"></textarea>
+                    <label class="form__button form__button--cancel" for="avatar">Seleccione un imagen</label>
+                    <input hidden class="form__input" type="file" id="avatar" name="avatar">
+                </div>
+                <div class="form__box form__box--flex ">
+                    <a href="" class="form__button form__button--cancel">Cancelar</a>
+                    <button  class="form__button form__button--send" type="submit">Guardar cambios</button>
+                </div>
+          </form>
+        </section>
+    </main>
+</body>
+
+</html>

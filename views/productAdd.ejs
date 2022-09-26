@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('./partials/head',{ title : 'Agregar producto' }) %>
+
+
+    <body class="register">
+        <%- include('./partials/header') %>
+
+        <main class="register__main">
+            <section class="register__main__section general__main__section">
+                <h1 class="form__title">Agregar producto</h1>
+                    <form action="" class="row" method="POST" enctype="multipart/form-data">
+                        <div class="col-12 mb-3">
+                            <label for="name" class="form-label">Nombre</label>
+                            <input type="text" class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null  %>" id="name" name="name" value="<%= locals.old && old.name ? old.name : null %>">
+                            <small class="text-danger"><%= locals.errors && errors.name ? errors.name.msg : null %></small>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="price" class="form-label">Precio</label>
+                            <input type="number" class="form-control <%= locals.errors && errors.price ? 'is-invalid' : null  %>" id="price" name="price" value="<%= locals.old && old.price ? old.price : null %>">
+                            <small class="text-danger"><%= locals.errors && errors.price ? errors.price.msg : null %></small>
+
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="discount" class="form-label">Descuento</label>
+                            <input type="number" class="form-control <%= locals.errors && errors.discount ? 'is-invalid' : null  %>" id="discount" name="discount" value="<%= locals.old && old.discount ? old.discount : 0 %>">
+                            <small class="text-danger"><%= locals.errors && errors.discount ? errors.discount.msg : null %></small>
+
+                        </div>
+                        <div class="col-12 mb-3">
+                            <label for="description" class="form-label">Descripción</label>
+                            <textarea class="form-control <%= locals.errors && errors.description ? 'is-invalid' : null  %>" id="description" name="description" rows="3" style="resize: none;"><%= locals.old && old.description ? old.description : null %></textarea>
+                            <small class="text-danger"><%= locals.errors && errors.description ? errors.description.msg : null %></small>
+
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="brand" class="form-label">Marca</label>
+                            <select class="form-select <%= locals.errors && errors.brand ? 'is-invalid' : null  %>" aria-label="Default select example" id="brand" name="brand">
+                                <option value="" selected hidden>Seleccione...</option>
+                                <% brands.forEach(brand => { %>
+                                  <option value="<%= brand %>" <%= locals.old && old.brand && brand === old.brand ? 'selected' : null %>><%= brand %></option>
+                                <% }) %>
+                              </select>
+                              <small class="text-danger"><%= locals.errors && errors.brand ? errors.brand.msg : null %></small>
+
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="category" class="form-label">Categoría</label>
+                            <select class="form-select <%= locals.errors && errors.category ? 'is-invalid' : null  %>" aria-label="Default select example" id="category" name="category">
+                                <option value="" selected hidden>Seleccione...</option>
+                                <% categories.forEach(category => { %>
+                                    <option value="<%= category %>" <%= locals.old && old.category && category === old.category ? 'selected' : null %>><%= category %></option>
+                                <% }) %>
+                    
+
+                              </select>
+                              <small class="text-danger"><%= locals.errors && errors.category ? errors.category.msg : null %></small>
+
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="section" class="form-label">Sección</label>
+                            <select class="form-select <%= locals.errors && errors.section ? 'is-invalid' : null  %>" aria-label="Default select example" id="section" name="section">
+                                <option value="" selected hidden>Seleccione...</option>
+                                <% sections.forEach(section => { %>
+                                    <option value="<%= section%>" <%= locals.old && old.section && section === old.section ? 'selected' : null %>><%= section %></option>
+                                <% }) %>
+                              </select>
+                              <small class="text-danger"><%= locals.errors && errors.section ? errors.section.msg : null %></small>
+
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="image" class="form-label">Imagenes</label>
+                           <input id="image" type="file" name="images" class="form-control" accept="image/*" multiple>
+                           <small class="text-danger"><%= locals.errors && errors.images ? errors.images.msg : null %></small>
+                        </div>
+
+                       
+                        <div class="form__box form__box--flex ">
+                            <a href="/" class="form__button form__button--cancel">Cancelar</a>
+                            <button class="form__button form__button--send" type="submit">Guardar</button>
+                        </div>
+                    </form>
+                </section>
+            </main>
+    </body>
+
+</html>

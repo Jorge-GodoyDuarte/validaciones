@@ -1,0 +1,47 @@
+[
+   {
+      "id": 1,
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "password": "",
+      "rol": "user",
+      "avatar": null,
+      "gender": null,
+      "hobbies": [],
+      "address": null,
+      "city": null,
+      "province": null,
+      "about": null
+   },
+   {
+      "id": 2,
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "password": "",
+      "rol": "user",
+      "avatar": null,
+      "gender": null,
+      "hobbies": [],
+      "address": null,
+      "city": null,
+      "province": null,
+      "about": null
+   },
+   {
+      "id": 3,
+      "firstName": "emanuel",
+      "lastName": "diaz",
+      "email": "demanuel269@gmail.com",
+      "password": "$2a$10$TsOxVsCpQqzM3emc/eLIre8aamZ35szuG1S8ePZ4Yy3WqRZtMrFei",
+      "rol": "user",
+      "avatar": null,
+      "gender": null,
+      "hobbies": [],
+      "address": null,
+      "city": null,
+      "province": null,
+      "about": null
+   }
+]
